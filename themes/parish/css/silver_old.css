@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Sep-2016, 13:26:30
+    Author     : lyncaa
+*/
+
+body {
+    background:#F3E4F4;
+}
+
+#navWrap {
+    background:#996699;
+}
+#header, #footer {
+    background:#765077
+}
+#subNav {
+    border:1px solid silver;
+}
+
+#mainNav {
+    background:#B993BA;
+}
+#mainNav a.current, #mainNav a.section {
+    background:#332433;
+    color:white;;
+}
+.sideBar h2, p.flex-caption {
+    background:#9BA0B2;
+    color:white;
+}
+#footer a, #footer p {
+    color:silver
+}
+#footer {
+        border-top: 12px solid #6F4570;
+}

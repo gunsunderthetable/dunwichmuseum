@@ -1,0 +1,931 @@
+/*  Created on : July-2015 | Author : Adrian Lynch */ 
+
+/* 1580 */
+#sidr, .mobile, #mobileLinks, .tablet, a.mobileNav {display:none;}
+
+body {
+    font-family:"Open Sans", arial, sans-serif;
+    background:#d5f2f7;
+    color: #1b1b1b;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family:"Roboto Slab", arial, sans-serif;
+    font-weight:700;
+}
+
+p {
+    font-size:1.1em;
+    line-height:1.5;
+}
+
+a {
+    color:#0767B2;
+    -webkit-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+}
+a:hover {
+    color:silver;
+}
+hr {
+    border:0;
+    height:1px;
+    background:silver;
+}
+
+/*---------------------------header----------------------------------*/
+/*.container {background:pink;}*/
+#header, #mobileHeader {
+    background-color:#1c4c55;
+    height:300px;
+    position:relative;
+    color:white;
+    overflow:hidden;
+    width:100%;
+    max-width:1580px;
+    margin:0 auto;
+}
+
+#headerPanel {
+    position:relative;
+    overflow:hidden;
+}
+img.masthead {
+    position:absolute;
+    top:0;
+    left:0;
+    width:auto;
+    height:100%;
+    z-index:1;
+}
+
+img.logo {
+    width:200px; height:auto;
+    float:left;
+    position:relative;
+    z-index:2;
+    margin:20px 30px 0 0;
+}
+
+#headerText {
+    position:relative;
+    z-index:2;
+    width:70%;
+    float:left;
+    margin-top:40px;
+}
+#headerText.backgrounded {
+    background:rgba(0,0,0,0.6);
+    padding:0 2%;
+    width:66%
+}
+
+#headerText p {
+    font-size:1.8em;
+    font-weight:bold;
+}
+#headerText.large p {font-size:2.4em;}
+#headerText.large h1 {font-size:4em;}
+
+#headerText.dropShadow {text-shadow: 1px 1px 1px #000;}
+#headerText.black,#headerText.black h1 {color:black;}
+#headerText.blue,#headerText.blue h1 {color:skyblue;}
+#headerText.grey,#headerText.grey h1 {color:grey;}
+
+#headerText.withLogo {
+    width:45%;
+}
+
+#headerTools {
+    width:27%;
+    /*height:200px;*/
+    float:right;
+    position:relative;
+    z-index:2;
+    margin-top:40px;
+}
+
+#headerTools p {
+    text-align:right;
+    padding:10px 0 0 0;
+}
+
+#headerTools p a {
+    color:white;
+    font-size: 1em;
+    line-height: 1;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#headerTools p a:hover {
+    color:silver;
+}
+
+#headerTools p.searchText {
+    /*padding-top:50px;*/
+    clear:right;
+    font-size:1.35em;
+    font-family:"open-sans", arial, sans-serif;
+}
+#socialButtons {
+    float:right;
+    height:40px;
+}
+#socialButtons img {
+    opacity:1;
+}
+#socialButtons img:hover {
+    opacity:0.8;
+}
+/*-------------------------------------- search ------------------------------------------*/
+#searchWrapper {
+    height:40px;
+    width:90%;
+    padding:12px 0 0;
+    clear:right;
+    float:right;
+}
+
+#mobileSearchWrapper {
+    position:relative;
+    z-index:11;
+    display:none;
+}
+
+form#SearchForm_SearchForm {
+    width:100%;
+    margin:0 auto;
+    height:39px;
+    background:white url(../images/search_bg.png) no-repeat top right;
+    position:relative;
+    padding:0;
+}
+
+form#SearchForm_SearchForm .middleColumn {
+    width:70%;
+    float:left;
+    height:20px;
+}
+
+form#SearchForm_SearchForm input[type="text"] {
+    background:transparent;
+    color:black;
+    position:absolute;
+    top:0;
+    left:0;
+    border:0;
+}
+form#SearchForm_SearchForm input[type="submit"] {
+    position:absolute;
+    right:0;
+    top:6px;
+    width:45px;
+    color:transparent;
+    padding-right:0px;
+    text-shadow:none;
+    background:transparent;
+    border:0;
+}
+
+
+
+/*-------------------------homepage sidebar ----------------------------*/
+.sideBar.homePage {
+    width:27.5%;
+    float:left;
+    margin:0 0 3% 0;
+}
+.sideBar {
+    width:26.5%;
+    float:right;
+    margin:0 0 3% 2%;
+}
+
+.sideBar h2 {
+   font-size:1.3em;
+   padding:6px 0 8px 12px;
+   margin:0;
+   background:#97C4CD;
+   width:96%;
+}
+
+/*.sideBar .event {
+    padding:3.5% 20% 4.5% 4%;
+    margin-bottom:2px;
+    background:#ececec url(../images/right_arrow_blank.png) no-repeat center right;
+    background-position:94% 10%;
+}
+.sideBar .event.first {
+    margin-bottom:0;
+}*/
+/*.sideBar.homePage a {
+    color:black;
+}*/
+.sideBar.homePage a:hover {
+    color:silver;
+}
+
+/*.sideBar .event h3 {
+    font-size:1.3em;
+    font-weight:800;
+    margin:0 0 .2em 0;
+    line-height:1.1;
+}
+.sideBar .event p {
+    margin-bottom:1%;
+    line-height:1.2;
+}
+.sideBar h2.newsHeader {
+    margin-top:20px;
+}
+.sideBar .iHateSpacers {
+    height:2px;
+}*/
+
+#events, #news {
+    width:90.7%;
+    padding-bottom:0;
+}
+#events h3 {
+    margin-bottom:0.2em;
+}
+p.eventDates {
+    margin:0;
+}
+.grey {
+    color:grey;
+}
+/*.imgWrapper {
+    padding:0;
+    margin-bottom:-5px;
+}*/
+
+a.readMore {
+    color:#0767B2;
+    display:block;
+    float:right;
+    margin-bottom:.5em;
+}
+/*----------------------------main nav-----------------------------*/
+/* main nav -----------------------------------*/
+
+#navWrap {
+    background:#27565F;
+}
+#mainNav {
+    font-family: 'Roboto Slab', Arial, sans-serif;
+    font-size:1.3em;
+    width:100%;
+    background:#316069;
+    height:40px;
+    overflow:hidden;
+  
+
+}
+#mainNav ul {
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+#mainNav li {
+    float:left;
+    margin:0;
+}
+
+#mainNav a {
+	display:block;
+	float:left;
+	padding:4px 14px;
+	height:32px;
+	line-height:34px;
+        font-weight:700;
+        color:white;
+        -webkit-transition: background .15s ease-in;
+        transition: background .15s ease-in;        
+}
+
+
+#mainNav a:hover,
+#mainNav a:focus {
+        background:black;
+}
+#mainNav a.current,
+#mainNav a.section {
+    color:silver;
+        background:black;
+    
+}
+/*---------------------------main homepage panel-----------------------*/
+#homePanel {
+    /*    the wrapper for the boxes*/
+    width:70%;
+    float:right;
+    overflow:hidden;
+    margin-bottom:2%;
+}
+
+/*-------------------------quick links----------------------*/
+
+#links ul {margin:20px 0;}
+
+#mobileLinks {
+/*    content: "";
+    display: table;
+    clear: both;   */
+    background:white;
+    width:95.5%;
+    padding:10px 2%;
+    border:1px solid silver;
+    margin-bottom:20px;
+}
+
+#mobileLinks.bottomed {
+    margin-top:30px;
+}
+
+#mobileLinks h2 {
+    width:20%;
+    float:left;
+    padding-right:3%;
+    margin:6px 0 12px;
+    font-size:1.6em;
+}
+#mobileLinks p {
+    margin:8px 0 0;
+    width:75%;
+    float:left;
+}
+#mobileLinks p a {
+    display: inline-block;
+    padding: 2px 16px 2px 16px;
+    margin:0 5px 8px 0;
+    font-size: 14px;
+    line-height: 28px;
+    color: black;
+    background: silver;
+    border-radius: 10px;
+    -webkit-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+}
+
+#mobileLinks p a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+/*----------------------------------------------Sub navigation--------------------------------------------*/
+#subNav, #onlineNav {
+    border:1px solid silver;
+    background:white;
+    width:90%;
+    padding:5%;
+    margin-bottom:5%;
+    margin-top:26px;
+}
+#subNav.sidrNav {
+    border:0;
+}
+#subNav h2 {
+    font-size:1.6em;
+    margin:0 0 20px;
+    letter-spacing:0.5px;
+}
+#subNav h3 {
+    margin-top:0;
+}
+.nav {
+    background:white;
+    padding:5%;
+}
+
+.nav ul li ul li.current {background:silver}
+
+.nav ul li ul li a:hover {
+    color:silver;
+}
+
+.nav ul li ul li.current a:hover {
+    color:white;
+} 
+.nav ul li {
+    border-bottom:none;
+    margin-bottom:6px;
+    padding:4px 0 4px 20px;    
+    background: url(../images/right_arrow.png) no-repeat 0 10px;
+}
+.nav ul li a {
+    font-size:1.1em;
+    font-weight:bold;
+    text-decoration:none;  
+    color:black;
+    margin:0 ;
+    line-height:1;
+    
+}
+.nav ul li a:hover {
+    color:silver;
+}
+.nav ul li a.current,#subNav ul li a.section  {color:grey;}
+/*#simpleNav ul li a.current, a.galleryTop.current {color:red;}*/
+
+
+/*------------------------------- page stuff --------------------------------------*/
+#breadBox {
+    margin:20px 0 20px;
+}
+#standardPage {
+    padding:0%;
+    width:100%;
+    margin: 30px 0 ;
+    min-height:250px;
+}
+
+
+.pageContent {
+    width:70%;
+    float:left;
+}
+
+#standardPage.fullWidthLayout .pageContent {
+    width:100%;
+    float:left;
+}
+
+.pageContent ul li {
+    list-style:disc inside;
+    margin-left:20px;
+}
+.pageContent ol li {
+    list-style:decimal inside;
+    margin-left:20px;
+}
+.pageContent img {
+    max-width:60%;
+    height:auto;
+    padding-top:5px;
+}
+.rightPanel {
+    width:25%;
+    float:right;
+}
+
+#standardPage.fullWidthLayout .rightPanel {
+    display:none;
+}
+
+#pagePanel {
+    margin:30px 0;
+}
+
+#landingText {
+    text-align:center;
+    margin-bottom:2em;
+}
+/*-------------------------------councillors---------------------------------------------*/
+#councillorBanner {
+    background:#EFEFEC;
+    width:96%;
+    padding:2%;
+margin-bottom:30px;
+    
+}
+#councillorBannerText {
+    width:60%;
+    float:left;
+}
+#councillorPortrait img {
+    padding:12px;
+    background:white;
+    float:right;
+}
+ul#councillorResults li {
+    list-style-type:none;
+    padding-bottom:12px;
+    border-bottom:1px solid silver;
+}
+ul#councillorResults li.last {
+    border-bottom:0;
+}
+ul#councillorResults li a {
+    font-weight:bold;
+    font-size:1.4em;
+}
+
+ul#councillorResults li span:before {
+    content:", "
+}
+ul#councillorResults li span.first:before {
+    content:""
+}
+#memberSearch select{
+    width:260px;
+}
+#memberSearch fieldset {
+    margin-top:25px;
+}
+#memberSearch label {
+    float:left;
+    font-size:1.1em;
+    padding-top:5px;
+    width:100px;
+}
+#memberSearch input[type="text"] {
+    width:260px;
+}
+#memberSearch input[type="submit"] {
+    background:#599aac;
+    color:white;
+    font-size:1.2em;
+    border:2px solid #00708A;
+    height:50px;
+    margin-top:20px;
+    margin-left:215px;
+}
+/*--- community enabling-----*/
+
+table#budgetLines {
+    width:100%;
+    background:#EFEFEC;
+}
+table#budgetLines td, table#budgetLines th {
+    padding:1% 2%;
+    border:5px solid white;
+}
+table#budgetLines th {
+    background:silver;
+    color:white;
+}
+td.budgetOrganisation {
+    width:20%;
+}
+td.budgetProject {
+    width:50%;
+}
+td.budgetAmount {
+    width:10%;
+}
+
+/*----------------------------------footer-------------------------------*/
+
+#footer {
+    border-top:12px solid black;
+    background:#1c4c55;    
+    margin-top:12px;
+    min-height:60px;    
+}
+
+#footer a {
+    color:white;
+}
+
+#footer a:hover {
+    color:silver;
+}
+
+/*----------------------sub - footer colophone-------------------------------*/
+
+
+.colophon.left {
+    float:left;
+    color:white;
+    font-size:0.8em;
+}
+.colophon.right {
+    float:right;
+    color:white;
+    font-size:0.8em;
+}
+#colophonFooter {
+    padding:16px 0px;
+
+}
+#cloudLogo {
+    clear:left;
+    width:100%;
+    position:relative;
+    padding:22px 0;
+}
+#cloudLogo a{
+    display:block;
+    text-align:center;
+    width:117px;
+    margin:0 auto;
+}
+#cloudLogo img:hover {
+    opacity:0.8;
+}
+/*------------image links in the left nav homepgae---------------------*/
+.imageLink {
+    position:relative;
+    background:#F05449;
+    margin:26px 0 0;
+    overflow:hidden;
+}
+.imageLink:hover {
+    opacity:0.7;
+}
+.imageLinkText {
+    width:80%;
+    margin-left:10%;
+    position:absolute;
+    top:32%;
+    text-align:center;
+}
+
+.imageLink h1 {
+    line-height:1;
+    letter-spacing:1px;
+    color:white;
+    font-weight:700;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+}
+.imageLink h2 {
+    font-size:1.8em;
+    line-height:1;
+    margin-bottom:8px;
+    background:transparent;
+    color:white;
+    font-weight:300;
+    text-shadow: 1px 1px 1px #000;    
+}
+
+.imageLink img {
+    width:100%;
+    height:auto;
+    opacity:0.8;
+    display:block;
+}
+.imageLink a {line-height:-1;}
+
+/*------------------------------------- widgets and stuff -------------------------------*/
+.widget {
+    margin-top:16px;
+    background:white;
+    border:1px solid silver;
+    padding:5%;
+    
+}
+.widget h3 {
+    font-size:2em;
+    margin:12px 0 10px;
+}
+
+
+/* ------------------images in content----------------------------------------*/
+img.left {
+    float:left;
+    padding-right:20px;
+    max-width:50%
+}
+
+img.right {
+    float:right;
+    padding-left:20px;
+    max-width:50%   
+}
+
+img.center {
+    float:none;
+    margin:0 auto;
+    max-width:50%;
+    display:block;
+    clear:both;
+}
+
+/*----------------------------- asset lister in page -----------------------------------------------*/
+
+.assetLister li.jpg, .assetLister li.jpeg{ background:url(../images/file-icons/jpg.png) no-repeat left top; }
+.assetLister li.mov, .assetLister li.mp4{ background:url(../images/file-icons/video.png) no-repeat left top; }
+.assetLister li.mp3 { background:url(../images/file-icons/mp3.png) no-repeat left top; }
+
+.assetLister li.ppt, .assetLister li.pptx{ background:url(../images/file-icons/blank.png) no-repeat left top; }
+.assetLister li.doc, .assetLister li.docx{ background:url(../images/file-icons/doc.png) no-repeat left top; }
+.assetLister li.png{ background:url(../images/file-icons/png.png) no-repeat left top; }
+.assetLister li.gif{ background:url(../images/file-icons/gif.png) no-repeat left top; }
+.assetLister li.xls, .assetLister li.xlsx{ background:url(../images/file-icons/xls.png) no-repeat left top; }
+.assetLister li.pdf{ background:url(../images/file-icons/pdf.png) no-repeat left top; }
+.assetLister li.csv{ background:url(../images/file-icons/csv.png) no-repeat left top; }
+
+.assetLister ul li {
+    list-style-type:none;
+    padding:0 0 12px 50px;
+    line-height:1.6;
+}
+
+.assetLister .size {
+    color:silver;
+}
+
+/*---------------------- pour le widget ---------------------------------------------------*/
+.assetListerWidget ul {
+    margin:26px 0 0 12px;
+}
+
+/*--------------------------------------blog ----------------------------------------------*/
+
+.hfeed img {
+    float:right;
+    width:34%;
+    padding-left:3%;
+    height:auto;
+}
+.hfeed h1, .hfeed h2 {
+    margin:0 0 8px;;
+}
+.hfeed h1 a, .hfeed h2 a {
+    color:black;
+}
+.hfeed h1 {
+    font-size:1.8em;
+    font-weight:700;
+}
+.hfeed h2 {
+    font-size:1.2em;
+    font-weight:700;
+}
+.hfeed h1 a:hover, .hfeed h2 a:hover {
+    color:silver;
+}
+ol, ul {list-style-type:none}
+
+p.authorDate {color:grey;}
+
+p.readMore img.first {
+    padding-left:0;
+}
+p.readMore img:hover {
+    opacity:0.8;
+}
+
+.blogImage img {
+    float:left;
+    padding:0 20px 0px 0;
+}
+p.tags {
+    margin-bottom:0;
+}
+p.shareBlogStory  {
+    margin:0 0 18px 0;
+}
+p.shareBlogStory img {
+    width:30px;
+    position: relative;
+    top:8px;
+}
+p.shareBlogStory img:hover {
+    cursor:pointer;
+    opacity:0.8;
+}
+p.shareBlogStory span {
+    padding-right:6px;
+}
+
+#blogContent {
+    clear:left;
+}
+/*----------------------------------Calendar-------------------------------*/
+
+body.Calendar .pageContent ul li {
+    list-style:none;
+}
+/*-----------------------------------forms------------------------------------*/
+input[type="text"],textarea {
+    width:50%;
+    background:#f6f6f6;
+}
+input[type="checkbox"] {
+    float:left;
+    display:block;
+    padding:4px 6px 0 0;
+    margin:6px 0 0;
+    height:12px;
+    width:20px;
+}
+.pageContent form ul li {
+    list-style:none;
+    margin:0 0 12px 20px;
+}
+
+/*---------------------------------Image Gallery------------------------------------*/
+#imageGallerytLister ul li{
+    list-style-type:none;
+}
+#imageGallerytLister ul li img {
+    width:22%;
+    margin:0 1% 12px 1%;
+    float:left;
+}
+#imageGallerytLister ul li img:hover {
+    opacity:0.8;
+}
+/*------------------------pagination----------------------------*/
+
+
+.pagination ul {
+    list-style-type:none;
+    padding:30px 0 0 0;
+}
+
+.pageContent .pagination li{
+    float:left;
+    line-height:1;
+    list-style-type:none;
+    margin-left:0;
+}
+
+.pagination a, .pagination .noLink{
+    float:left;
+    display:block;
+    border-right:1px solid #c1c1c1;
+    padding:0 8px;
+        font-weight:bold;
+        font-size:1.2em;
+}
+
+.pagination a.last 
+{
+    border-right:none;
+}
+.pagination a.disabled {
+    color:silver;
+}
+.pagination .prev a,
+.pagination .next a{
+    border:none;
+    padding:0;
+}
+
+.pagination .prev a{
+    padding-right:16px;
+}
+
+.pagination .next a{
+    padding-left:16px;
+}
+.searchResults a.next {
+    border-right:0;
+}
+.searchResults .pageCount {
+    clear:left;
+    padding-top:16px;
+    font-size:1em;
+    color:grey;
+}
+/*-------------------------------- Clear and be happy--------------------------------------------------*/
+
+.clearFix {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/*--------------------------------start media queries for mobiles and tablets----------*/
+
+/* For devices larger than 400px  consider this the phone */
+@media (max-width: 1460px) {
+        .container {width:100%;}
+}
+
+@media (max-width: 1200px) {
+    #headerText.large h1 {font-size:3em;}
+    #headerText.large p {font-size:2em;}
+}
+
+@media (max-width: 960px) {
+    #header {display:none;}
+    #mobileHeader {height:200px;}
+    #headerText {width:65%;margin-top:20px;}
+    #headerTools {margin-top:20px;}
+    #headerTools p, #socialButtons {display:none;}
+    
+    #headerText.large h1 {font-size:3em;}
+    #headerText.large p {font-size:2em;}
+    .desktop {display:none;}
+    .tablet {display:block;}
+    .mobile {display:block;}
+    #mobileLinks {display:table;}
+    #homePanel {width:100%;}    
+    .pageContent img {display:none;}
+    .headerPanel {height:auto;}
+    #headerText, #headerText.backgrounded {width:100%;text-align:center;background:transparent;padding:0;}
+    #headerTools {width:100%;margin-top:0;}
+    #searchWrapper {width:87%;padding-right:3%;}
+    #mainNav {display:none;}
+    .pageContent,.rightPanel {width:100%;}
+    #breadBox {margin-left:0;}
+    a.mobileNav {display:block;position:absolute;left:2%;top:20px;}
+    .colophon.left, .colophon.right {float:none;width:100%;text-align:center;}
+
+}
+
+
+@media (max-width: 550px) {
+    #header {height:auto;padding-bottom:20px;}
+    #searchWrapper {width:80%;}
+    #headerText h1 {font-size:2em;}
+    #headerText p {font-size:1.4em;line-height:1.2;}    
+}
+

@@ -1,0 +1,5 @@
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet"> font-family: 'Baloo Bhaina', cursive;
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900" rel="stylesheet"> font-family: 'Merriweather', serif;
+
+<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet"> font-family: 'Passion One', cursive;

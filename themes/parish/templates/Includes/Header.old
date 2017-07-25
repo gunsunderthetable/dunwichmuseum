@@ -1,0 +1,60 @@
+<div id="header" <% if $SiteConfig.HeaderDepth %>style="height:{$SiteConfig.HeaderDepth}px;"<% end_if %>>
+    <% if $SiteConfig.Masthead %>
+        <% if $SiteConfig.HeaderDepth %>
+        <img class="masthead desktop" src="$SiteConfig.Masthead.CroppedImage(1580,$SiteConfig.HeaderDepth).URL" alt="$SiteConfig.Title" title ="$SiteConfig.Title" />
+        <% else %>
+        <img class="masthead desktop" src="$SiteConfig.Masthead.CroppedImage(1580,300).URL" alt="$SiteConfig.Title" title ="$SiteConfig.Title" />
+        <% end_if %>
+    <% end_if %>
+    <div class="container">
+        <div id="headerPanel" class="twelve columns clearFix">
+            <% if $SiteConfig.Logo %>
+            <img class="logo desktop" src="$SiteConfig.Logo.CroppedImage(200,255).URL" alt="$SiteConfig.Title logo" />
+            <% end_if %>
+            <div id="headerText" class="$SiteConfig.HeaderSize $SiteConfig.HeaderColour<% if $SiteConfig.HeaderDropShadow %> dropShadow<% end_if %><% if $SiteConfig.HeaderBackground %> backgrounded<% end_if %><% if $SiteConfig.Logo %> withLogo<% end_if %>">
+                <% if not $SiteConfig.HideHeaderText %>
+                <h1>$SiteConfig.Title</h1>
+                <p>$SiteConfig.Tagline</p>
+                <% end_if %>
+            </div>
+            <div id="headerTools">
+                <a class="menuButton mobileNav" id="sidr-menu" href="#sidr"><img src="$ThemeDir/images/mobile_menu.png" alt="mobile menu button" /></a>
+                <% if $HeaderLinks %> 
+                <p>
+                    <% loop $HeaderLinks %>
+                        <a href="$URL" title="$LinkText">$LinkText</a><% if Last %><% else %>&nbsp;|&nbsp;<% end_if %>        
+                    <% end_loop %>    
+                </p>
+                <% end_if %>
+                <% if $SiteConfig.TwitterLink || $SiteConfig.FacebookLink %>
+                <div id="socialButtons">
+                    <% if $SiteConfig.TwitterLink %><a href="$SiteConfig.TwitterLink" target="_blank" alt="twitter"><img src ="$ThemeDir/images/twitter.png" /></a><% end_if %>
+                    <% if $SiteConfig.FacebookLink %><a href="$SiteConfig.FacebookLink" target="_blank" alt="facebook"><img src ="$ThemeDir/images/facebook.png" /></a><% end_if %>
+                </div>
+                <% end_if %>
+                <% if not $SiteConfig.HideSearch %>
+                <% include Search %>
+                <% end_if %>
+            </div>
+        </div>  
+    </div>
+</div>
+
+<div id="mobileHeader" class="mobile">
+    <div class="container">
+        <div id="headerPanel" class="twelve columns clearFix">
+            <div id="headerText" class="$SiteConfig.HeaderSize $SiteConfig.HeaderColour<% if $SiteConfig.HeaderDropShadow %> dropShadow<% end_if %><% if $SiteConfig.HeaderBackground %> backgrounded<% end_if %><% if $SiteConfig.Logo %> withLogo<% end_if %>">
+                <% if not $HideHeaderText %>
+                <h1>$SiteConfig.Title</h1>
+                <p>$SiteConfig.Tagline</p>
+                <% end_if %>
+            </div>
+            <div id="headerTools">
+                <a class="menuButton mobileNav" id="sidr-menu" href="#sidr"><img src="$ThemeDir/images/mobile_menu.png" alt="mobile menu button" /></a>
+                <% include Search %>
+            </div>
+        </div>  
+    </div>
+</div>
+
+<% include MainNav %>

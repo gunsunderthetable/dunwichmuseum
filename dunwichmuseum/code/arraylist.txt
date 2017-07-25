@@ -1,0 +1,11 @@
+                    $output = new ArrayList();
+
+                    if($msgs) {
+                        foreach($msgs as $msg) {
+                            $output->push(new ArrayData(array(
+                                'Title' => Convert::xml2raw($msg->title),
+                                'Link' => Convert::xml2raw($msg->link),
+                                'Description' => Convert::xml2raw($msg->description)
+                            )));
+                        }
+                    } 
